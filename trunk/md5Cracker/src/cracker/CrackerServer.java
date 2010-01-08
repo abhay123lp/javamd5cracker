@@ -30,6 +30,8 @@ public class CrackerServer implements Cracker {
 		return ret;
 	}
 		
+	//TODO: consider server.policy, as in wiki example 
+	
 	public static void main(String[] args) throws RemoteException, NoSuchAlgorithmException, NotBoundException, MalformedURLException, AlreadyBoundException{
 		hash=args[0].getBytes();
 		maxKey = Integer.parseInt(args[1]);
