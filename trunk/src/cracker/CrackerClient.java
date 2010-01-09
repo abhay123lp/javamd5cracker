@@ -51,6 +51,9 @@ public class CrackerClient {
 
 	public static void main(String[] args) throws NoSuchAlgorithmException, RemoteException, NotBoundException{
 		final Registry registry = LocateRegistry.getRegistry( (args == null || args.length == 0 )? "localhost" :args[0]); //name of server host
+		final String host = (args.length == 0)? null: args[0];
+		final int port = (args.length == 0 || args[1] == null)? Registry.REGISTRY_PORT: Integer.parseInt(args[1]);
+		LocateRegistry.getRegistry(host, port);
 		final Cracker ck = (Cracker) registry.lookup(Cracker.class.getName());
 		
 		while (true){

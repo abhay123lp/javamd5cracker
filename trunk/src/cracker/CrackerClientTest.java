@@ -20,6 +20,7 @@ public class CrackerClientTest {
 		String[] args = {s, String.valueOf(key.length())};
 		CrackerServer.main(args);
 		args[0] = "localhost";
+		args[1] = "1100";
 		CrackerClient.main(args);
 	}
 	
